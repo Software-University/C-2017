@@ -166,6 +166,7 @@
 				#include "history.html"
 				#include "develop.html"
 				#include "class.html"
+				#include "tempaltes.html"
 				#include "extern.html"
 				#include "constexpr.html"
 				#include "auto.html"
