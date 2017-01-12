@@ -1,0 +1,51 @@
+
+                <section>
+                    <section>
+					<div class="head">
+						<div class="logo"></div> <div class="title"><em>Extern</em></div>
+					</div>
+					<div class="body">
+                        It tells the compiler that the variable is defined somewhere else, so it doesn't complain about it being undefined or beeing redefined
+                        <div data-markdown>
+							```cpp
+&#47;&#47;include.hpp
+extern int a;
+
+&#47;&#47;file.cpp
+&#35;include &quot;include.hpp&quot;
+int a = 4;
+
+&#47;&#47;main.cpp
+&#35;include &lt;iostream&gt;
+&#35;include &quot;include.hpp&quot;
+
+int main() {
+    std::cout &lt;&lt; a &lt;&lt; std::endl;
+}
+&#47;&#47;compile command: g++ file.cpp main.cpp -o exe.exe -std=c++17
+							```
+						</div>
+					</div>
+					<br>
+					<br>
+					<div class="foot">	
+						<div class="number"> </div>
+						<div class="follow"> </div>
+					</div>
+                    </section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div>
+                        </div>
+                        <div class="body">
+                            <h1><strong>Extern</strong></h1>
+                            <h2>Live demo</h2>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">	
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+				</section>

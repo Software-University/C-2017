@@ -1,0 +1,119 @@
+                <section>
+					<section>
+						<div class="head">
+							<div class="logo"></div> <div class="title">Classes, Inheritance, Abstract classes</div>
+						</div>
+						<div class="body">
+							<div data-markdown>
+								```cpp
+								struct Abstract 
+								{
+									virtual void f () = 0; &#47;&#47; pure virtual
+									virtual void g () &#47;&#47; non-pure virtual
+									{
+									}
+
+									~Abstract () 
+									{
+										g (); &#47;&#47; okay, calls Abstract::g ()
+										f (); &#47;&#47; undefined behavior!
+										Abstract::f (); &#47;&#47; non-virtual call
+									}
+								};
+								```
+							</div>
+							<div data-markdown>
+								```cpp
+								&#47;&#47;definition of the pure virtual function
+								void Abstract::f () 
+								{
+									std::cout << "A::f()\n"; 
+								}
+
+								struct Concrete : Abstract 
+								{
+									void f () override 
+									{
+										Abstract::f (); &#47;&#47; OK: calls pure virtual function
+									}
+									void g() override 
+									{
+									
+									}
+								```
+							</div>
+							<div data-markdown>
+								```cpp
+									~Concrete ()
+									{
+										g (); &#47;&#47; okay, calls Concrete::g()
+										f (); &#47;&#47; okay, calls Concrete::f()
+									}
+								};
+			                    ```
+							</div>
+						</div>
+						<br>
+						<br>
+						<div class="foot">	
+							<div class="number"> </div>
+							<div class="follow"> </div>
+						</div>
+					</section>
+					<section>
+						<div class="head">
+							<div class="logo"></div> <div class="title">Classes, Inheritance, Abstract classes<br><em>final/override</em></div>
+						</div>
+						<div class="body">
+							<h3><em>final/override</em></h3>
+							<div data-markdown>
+								```cpp
+								struct Base
+								{
+									virtual void foo();
+								};
+								 
+								struct A : Base
+								{
+									void foo() final; &#47;&#47; A::foo is overridden and it is the final override
+									void bar() final; &#47;&#47; Error: non-virtual function cannot be overridden or be final
+								};
+								 
+								struct B final : A &#47;&#47; struct B is final
+								{
+									void foo() override; &#47;&#47; Error: foo cannot be overridden as it's final in A
+								};
+								```
+							</div>
+								 
+							<div data-markdown>
+								```cpp
+								struct C : B &#47;&#47; Error: B is final
+								{
+								};
+								```
+							</div>
+						</div>
+						<br>
+						<br>
+						<div class="foot">	
+							<div class="number"> </div>
+							<div class="follow"> </div>
+						</div>
+					</section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div>
+                        </div>
+                        <div class="body">
+                            <h1><strong>Classes, Inheritance, Abstract Classes</strong></h1>
+                            <h2>Live demo</h2>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">	
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+                </section>

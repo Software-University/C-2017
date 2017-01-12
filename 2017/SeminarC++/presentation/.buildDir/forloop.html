@@ -1,0 +1,59 @@
+                <section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div> <div class="title">Range-based <em>for</em> loop</div>
+                        </div>
+                        <div class="body">
+                            Executes a <em>for</em> loop over a range.<br>
+                            Used as a <u>more readable equivalent</u> to the traditional <em>for</em> loop operating over a range of values, such as all elements in a container.<br>
+                            <br>
+                            <div data-markdown>
+                                ```cpp
+                                vector &lt;int&gt; v = {0, 1, 2, 3, 4, 5};
+
+                                for (const int&amp; i : v) &#47;&#47; access by const reference
+                                    cout &lt;&lt; i &lt;&lt; ' ';
+                                cout &lt;&lt; '\n';
+
+                                for (auto&amp; i : v) &#47;&#47; typeof (i) == int&amp;
+                                    cout &lt;&lt; i &lt;&lt; ' ';
+                                cout &lt;&lt; '\n';
+
+                                map &lt;string, int&gt; m;
+                                for (auto&amp; x : m)
+                                    cout &lt;&lt; x.first &lt;&lt; " " &lt;&lt; x.second &lt;&lt; "\n";
+                                ```
+                            </div>
+                            <br>
+                            <h5><a href="http://en.cppreference.com/w/cpp/language/declarations#Decomposition_declaration">Decomposition declaration</a></h5>
+                            <div data-markdown>
+                                ```cpp
+                                map &lt;string, int&gt; m;
+                                for (auto&amp;&amp; [first, second] : m)
+                                    cout &lt;&lt; first &lt;&lt; " " &lt;&lt; second &lt;&lt; "\n";
+                                ```
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">	
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div>
+                        </div>
+                        <div class="body">
+                            <h1><strong>Range-based <em>for</em> loop</strong></h1>
+                            <h2>Live demo</h2>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">	
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+                </section>

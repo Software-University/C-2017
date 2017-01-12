@@ -1,0 +1,138 @@
+                <section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div> <div class="title"><em>Lambda functions</em></div>
+                        </div>
+                        <div class="body">
+                            Creates unnamed function object capable of capturing variables in scope. 
+                            <div data-markdown>
+                                ```cpp
+                                ['capture-list']('params') mutable(optional) constexpr(optional) exception attribute -> ret {
+                                    body
+                                }
+                                ```
+                            </div>
+                            Example:
+                            <div data-markdown>
+                                ```cpp
+                                [](auto a) -> auto {
+                                    return a * a;
+                                }
+                                ```
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">	
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div> <div class="title"><em>Lambda functions</em></div>
+                        </div>
+                        <div class="body">
+                            <div data-markdown>
+                                ```cpp
+                                ['capture-list']('params') mutable(optional) constexpr(optional) exception attribute -> ret {
+                                    body
+                                }
+                                ```
+                            </div>
+                            <h3>Capture list</h3>
+                            It is a comma-separated list of zero or more captures
+                            <ul>
+                                <li>[a, &amp;b] captures a by value and b by reference</li>
+                                <li>[&amp;] captures all variables in current scope by reference</li>
+                                <li>[=] captures all variables in current scope by value</li>
+                                <li>[] captures nothing</li>
+                            </ul>
+                            <br/>
+                            <br/>
+                            <h3>params</h3>
+                            It is the list of parameters(like in normal functions)
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">	
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div> <div class="title"><em>Lambda functions</em></div>
+                        </div>
+                        <div class="body">
+                            <div data-markdown>
+                                ```cpp
+                                ['capture-list']('params') mutable(optional) constexpr(optional) exception attribute -> ret {
+                                    body
+                                }
+                                ```
+                            </div>
+                            <h3>Mutable</h3>
+                             	Allows body to modify the parameters captured by copy
+                            <br/>
+                            <br/>
+                            <h3>constexpr</h3>
+                                Makes this function is a constant expression
+                            <br/>
+                            <br/>
+                            <h3>exception</h3>
+                                Provides the exception specification or the noexcept clause for operator() of the type 
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">	
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div> <div class="title"><em>Lambda functions</em></div>
+                        </div>
+                        <div class="body">
+                            <div data-markdown>
+                                ```cpp
+                                ['capture-list']('params') mutable(optional) constexpr(optional) exception attribute -> ret {
+                                    body
+                                }
+                                ```
+                            </div>
+                            <h3>attribute</h3>
+                             	Provides the attribute specification for operator()
+                            <br/>
+                            <br/>
+                            <h3>ret</h3>
+                                Defines the return type of the function
+                            <br/>
+                            <br/>
+                            <h3>Body</h3>
+                                The sequense of actions (like in normal functions) 
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">	
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div>
+                        </div>
+                        <div class="body">
+                            <h1><strong>Lambda functions</strong></h1>
+                            <h2>Live demo</h2>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">	
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+				</section>

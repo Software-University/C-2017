@@ -1,0 +1,858 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <title>Presentation</title>
+        <style>
+            strong {
+                color: orangered
+            }
+        </style>
+
+  <meta name="description" content="Function Graphics">
+  <meta name="author" content="Alex Tsvetanov">
+
+<!--
+  <link href="../../../BASE/reveal.js/css/impress-demo.css" rel="stylesheet">
+-->
+<!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="shortcut icon" href="/favicon.png">-->
+
+
+  <link rel="stylesheet" href="../../../BASE/reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../../../BASE/reveal.js/css/theme/black.css">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="../../../BASE/reveal.js/lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+   var link = document.createElement( 'link' );
+   link.rel = 'stylesheet';
+   link.type = 'text/css';
+   link.href = window.location.search.match( /print-pdf/gi ) ? '../../../BASE/reveal.js/css/print/pdf.css' : '../../../BASE/reveal.js/css/print/paper.css';
+   document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+
+  <link href="../../../BASE/reveal.js/css/template.css" rel="stylesheet" />
+ </head>
+ <body>
+  <div class="reveal">
+   <div class="slides">
+    <section>
+     <div class="head">
+      <div class="logo"></div><div class="title">C++ in 2017</div>
+     </div>
+     <div class="titlepage_body">
+      <center>
+       History, standarts (differences) and a lot of practices
+      </center>
+      <img height="500px" src="c11.jpg" />
+      <img src="../../../BASE/wizard.png" style="float: right;" />
+     </div>
+     <div class="foot">
+      <div class="bottom">
+       <div class="author">Alex Tsvetanov, Dimo Chanev</div>
+       <div class="organization">Students in SHSM</div>
+      </div>
+
+      <div class="number"> </div>
+      <div class="follow"> </div>
+     </div>
+     <aside class="notes">
+      Dimo
+     </aside>
+    </section>
+    <section>
+     <section>
+      <div class="head">
+       <div class="logo"></div><div class="title">Table of Content</div>
+      </div>
+      <div class="body">
+       <ul style="float: left;">
+        <li>History</li>
+        <li>Developing in C++</li>
+        <li>Standarts
+         <ul>
+          <li>C++98</li>
+          <li>C++03</li>
+          <li>C++TR1</li>
+          <li>C++11</li>
+          <li>C++14</li>
+          <li>C++17 (1z, not ready)</li>
+          <li>C++20</li>
+         </ul>
+        </li>
+        <li>Compilers &amp; IDEs</li>
+       </ul>
+       <img style="position:fixed; top: 20%; right: 0%;background-color: white;" src="./img1.png" width="50%" />
+      </div>
+      <div class="foot">
+       <div class="bottom"> </div>
+       <div class="number"> </div>
+       <div class="follow"> </div>
+      </div>
+     </section>
+     <section>
+      <div class="head">
+       <div class="logo"></div><div class="title">Table of Content</div>
+      </div>
+      <div class="body">
+       <!--<ul style="float: right; border-right: 40px solid rgba(0,0,0,0);">-->
+       <ul>
+        <li>
+         Classes, Inheritance, Abstract Classes
+        </li>
+        <li>
+         Templates
+        </li>
+        <li>
+         <em>extern</em>
+        </li>
+        <li>
+         Rvalues
+        </li>
+        <li>
+         <em>constexpr</em>
+        </li>
+        <li>
+         Initializer lists, Uniform initialization
+        </li>
+        <li>
+         <em>auto/decltype</em>
+        </li>
+        <li>
+         Range-based <em>for</em> loop
+        </li>
+        <li>
+         <em>Lambda</em> expressions
+        </li>
+        <li>
+         <em>Null pointer</em>
+        </li>
+        <li>
+         enumerations, "&lt;&lt;&gt;&gt;"
+        </li>
+        <li>
+         <em>typedef/using</em>
+        </li>
+        <li>
+         Literals
+        </li>
+        <li>
+         Digit separators
+        </li>
+        <li>
+         Attributes
+        </li>
+        <li>
+         new in STL
+        </li>
+       </ul>
+                            <img src="img/contents.png"/>
+      </div>
+      <div class="foot">
+       <div class="bottom"> </div>
+       <div class="number"> </div>
+       <div class="follow"> </div>
+      </div>
+      <aside class="notes">
+       Alex
+      </aside>
+     </section>
+    </section>
+    <section>
+     <div class="head">
+      <div class="logo"></div> <div class="title">History</div>
+     </div>
+     <div class="body">
+      <img src="./BjarneStroustrup.jpg" style="float: left;border-right: 50px solid rgba(0,0,0,0);" />
+      <p>Bjarne Stroustrup (30 December 1950) is a Danish computer scientist, most notable for the creation and development of the widely used C++ programming language.</p>
+      <p>Stroustrup began developing C++ in 1978 (then called "C with Classes").</p>
+      <p>Learn more: <a href="https://en.wikipedia.org/wiki/Bjarne_Stroustrup">Bjarne Stroustrup - Wikipedia</a></p>
+     </div>
+     <br>
+     <br>
+     <div class="foot">
+      <div class="number"> </div>
+      <div class="follow"> </div>
+     </div>
+    </section>
+    <section>
+     <div class="head">
+      <div class="logo"></div> <div class="title">Developing in C++</div>
+     </div>
+     <div class="body">
+      <img src="./wg21-timeline.png" style="background-color: white;" /><br>
+      imperative, object-oriented and generic programming features, while also providing facilities for low-level memory manipulation
+     </div>
+     <br>
+     <br>
+     <div class="foot">
+      <div class="number"> </div>
+      <div class="follow"> </div>
+     </div>
+    </section>
+                <section>
+     <section>
+      <div class="head">
+       <div class="logo"></div> <div class="title">Classes, Inheritance, Abstract classes</div>
+      </div>
+      <div class="body">
+       <div data-markdown>
+        ```cpp
+        struct Abstract
+        {
+         virtual void f () = 0; &#47;&#47; pure virtual
+         virtual void g () &#47;&#47; non-pure virtual
+         {
+         }
+
+         ~Abstract ()
+         {
+          g (); &#47;&#47; okay, calls Abstract::g ()
+          f (); &#47;&#47; undefined behavior!
+          Abstract::f (); &#47;&#47; non-virtual call
+         }
+        };
+        ```
+       </div>
+       <div data-markdown>
+        ```cpp
+        &#47;&#47;definition of the pure virtual function
+        void Abstract::f ()
+        {
+         std::cout << "A::f()\n";
+        }
+
+        struct Concrete : Abstract
+        {
+         void f () override
+         {
+          Abstract::f (); &#47;&#47; OK: calls pure virtual function
+         }
+         void g() override
+         {
+
+         }
+        ```
+       </div>
+       <div data-markdown>
+        ```cpp
+         ~Concrete ()
+         {
+          g (); &#47;&#47; okay, calls Concrete::g()
+          f (); &#47;&#47; okay, calls Concrete::f()
+         }
+        };
+                       ```
+       </div>
+      </div>
+      <br>
+      <br>
+      <div class="foot">
+       <div class="number"> </div>
+       <div class="follow"> </div>
+      </div>
+     </section>
+     <section>
+      <div class="head">
+       <div class="logo"></div> <div class="title">Classes, Inheritance, Abstract classes<br><em>final/override</em></div>
+      </div>
+      <div class="body">
+       <h3><em>final/override</em></h3>
+       <div data-markdown>
+        ```cpp
+        struct Base
+        {
+         virtual void foo();
+        };
+
+        struct A : Base
+        {
+         void foo() final; &#47;&#47; A::foo is overridden and it is the final override
+         void bar() final; &#47;&#47; Error: non-virtual function cannot be overridden or be final
+        };
+
+        struct B final : A &#47;&#47; struct B is final
+        {
+         void foo() override; &#47;&#47; Error: foo cannot be overridden as it's final in A
+        };
+        ```
+       </div>
+
+       <div data-markdown>
+        ```cpp
+        struct C : B &#47;&#47; Error: B is final
+        {
+        };
+        ```
+       </div>
+      </div>
+      <br>
+      <br>
+      <div class="foot">
+       <div class="number"> </div>
+       <div class="follow"> </div>
+      </div>
+     </section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div>
+                        </div>
+                        <div class="body">
+                            <h1><strong>Classes, Inheritance, Abstract Classes</strong></h1>
+                            <h2>Live demo</h2>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+     <div class="head">
+      <div class="logo"></div> <div class="title"><em>Extern</em></div>
+     </div>
+     <div class="body">
+                        It tells the compiler that the variable is defined somewhere else, so it doesn't complain about it being undefined or beeing redefined
+                        <div data-markdown>
+       ```cpp
+&#47;&#47;include.hpp
+extern int a;
+
+&#47;&#47;file.cpp
+&#35;include &quot;include.hpp&quot;
+int a = 4;
+
+&#47;&#47;main.cpp
+&#35;include &lt;iostream&gt;
+&#35;include &quot;include.hpp&quot;
+
+int main() {
+    std::cout &lt;&lt; a &lt;&lt; std::endl;
+}
+&#47;&#47;compile command: g++ file.cpp main.cpp -o exe.exe -std=c++17
+       ```
+      </div>
+     </div>
+     <br>
+     <br>
+     <div class="foot">
+      <div class="number"> </div>
+      <div class="follow"> </div>
+     </div>
+                    </section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div>
+                        </div>
+                        <div class="body">
+                            <h1><strong>Extern</strong></h1>
+                            <h2>Live demo</h2>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+    </section>
+                <section>
+                    <section>
+     <div class="head">
+      <div class="logo"></div> <div class="title"><em>Constant expressions(constexpr)</em></div>
+     </div>
+     <div class="body">
+                        The constexpr specifier declares that it is possible to evaluate the value of the function or variable at compile time
+                        <div data-markdown>
+       ```cpp
+constexpr long long fib(int a) {
+    if (a &lt;= 1)
+        return 1;
+    return fib(a - 1) + fib(a - 2);
+}
+
+int main() {
+    constexpr long long a = fib(91);
+    std::cout &lt;&lt; a &lt;&lt; std::endl;
+}
+       ```
+      </div>
+     </div>
+     <br>
+     <br>
+     <div class="foot">
+      <div class="number"> </div>
+      <div class="follow"> </div>
+     </div>
+                    </section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div>
+                        </div>
+                        <div class="body">
+                            <h1><strong>Constant expressions</strong></h1>
+                            <h2>Live demo</h2>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+    </section>
+    <section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div> <div class="title"><em>Auto/Decltype</em></div>
+                        </div>
+                        <div class="body">
+                            <h3><em>auto</em></h3>
+                            For variables, specifies that the type of the variable that is being declared will be automatically deduced from its initializer.
+                            <div data-markdown>
+                                ```cpp
+                                int a = 5;
+                                auto a = 5;
+                                ```
+                            </div>
+                            <div data-markdown>
+                                ```cpp
+                                long a = 5;
+                                auto a = 5l;
+                                ```
+                            </div>
+                            <div data-markdown>
+                                ```cpp
+                                map &lt;string, map &lt;string, map &lt; string, int &gt; &gt; &gt; a;
+                                map &lt;string, map &lt;string, map &lt; string, int &gt; &gt; &gt;::iterator it = a.begin ();
+                                auto it = a.begin ();
+                                ```
+                            </div>
+                            <h3><em>decltype</em></h3>
+                            Inspects the declared type of an entity or the type and value category of an expression.
+                            <div data-markdown>
+                                ```cpp
+                                map &lt;string, map &lt;string, map &lt; string, int &gt; &gt; &gt; a;
+                                decltype (a.begin ()) it;
+                                for (it = a.begin () ; it != a.end () ; it ++)
+                                {
+                                    ...
+                                }
+                                ```
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+        </section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div>
+                        </div>
+                        <div class="body">
+                            <h1><strong>Auto/Decltype</strong></h1>
+                            <h2>Live demo</h2>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div> <div class="title">Range-based <em>for</em> loop</div>
+                        </div>
+                        <div class="body">
+                            Executes a <em>for</em> loop over a range.<br>
+                            Used as a <u>more readable equivalent</u> to the traditional <em>for</em> loop operating over a range of values, such as all elements in a container.<br>
+                            <br>
+                            <div data-markdown>
+                                ```cpp
+                                vector &lt;int&gt; v = {0, 1, 2, 3, 4, 5};
+
+                                for (const int&amp; i : v) &#47;&#47; access by const reference
+                                    cout &lt;&lt; i &lt;&lt; ' ';
+                                cout &lt;&lt; '\n';
+
+                                for (auto&amp; i : v) &#47;&#47; typeof (i) == int&amp;
+                                    cout &lt;&lt; i &lt;&lt; ' ';
+                                cout &lt;&lt; '\n';
+
+                                map &lt;string, int&gt; m;
+                                for (auto&amp; x : m)
+                                    cout &lt;&lt; x.first &lt;&lt; " " &lt;&lt; x.second &lt;&lt; "\n";
+                                ```
+                            </div>
+                            <br>
+                            <h5><a href="http://en.cppreference.com/w/cpp/language/declarations#Decomposition_declaration">Decomposition declaration</a></h5>
+                            <div data-markdown>
+                                ```cpp
+                                map &lt;string, int&gt; m;
+                                for (auto&amp;&amp; [first, second] : m)
+                                    cout &lt;&lt; first &lt;&lt; " " &lt;&lt; second &lt;&lt; "\n";
+                                ```
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div>
+                        </div>
+                        <div class="body">
+                            <h1><strong>Range-based <em>for</em> loop</strong></h1>
+                            <h2>Live demo</h2>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div> <div class="title"><em>Lambda functions</em></div>
+                        </div>
+                        <div class="body">
+                            Creates unnamed function object capable of capturing variables in scope.
+                            <div data-markdown>
+                                ```cpp
+                                ['capture-list']('params') mutable(optional) constexpr(optional) exception attribute -> ret {
+                                    body
+                                }
+                                ```
+                            </div>
+                            Example:
+                            <div data-markdown>
+                                ```cpp
+                                [](auto a) -> auto {
+                                    return a * a;
+                                }
+                                ```
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div> <div class="title"><em>Lambda functions</em></div>
+                        </div>
+                        <div class="body">
+                            <div data-markdown>
+                                ```cpp
+                                ['capture-list']('params') mutable(optional) constexpr(optional) exception attribute -> ret {
+                                    body
+                                }
+                                ```
+                            </div>
+                            <h3>Capture list</h3>
+                            It is a comma-separated list of zero or more captures
+                            <ul>
+                                <li>[a, &amp;b] captures a by value and b by reference</li>
+                                <li>[&amp;] captures all variables in current scope by reference</li>
+                                <li>[=] captures all variables in current scope by value</li>
+                                <li>[] captures nothing</li>
+                            </ul>
+                            <br/>
+                            <br/>
+                            <h3>params</h3>
+                            It is the list of parameters(like in normal functions)
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div> <div class="title"><em>Lambda functions</em></div>
+                        </div>
+                        <div class="body">
+                            <div data-markdown>
+                                ```cpp
+                                ['capture-list']('params') mutable(optional) constexpr(optional) exception attribute -> ret {
+                                    body
+                                }
+                                ```
+                            </div>
+                            <h3>Mutable</h3>
+                              Allows body to modify the parameters captured by copy
+                            <br/>
+                            <br/>
+                            <h3>constexpr</h3>
+                                Makes this function is a constant expression
+                            <br/>
+                            <br/>
+                            <h3>exception</h3>
+                                Provides the exception specification or the noexcept clause for operator() of the type
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div> <div class="title"><em>Lambda functions</em></div>
+                        </div>
+                        <div class="body">
+                            <div data-markdown>
+                                ```cpp
+                                ['capture-list']('params') mutable(optional) constexpr(optional) exception attribute -> ret {
+                                    body
+                                }
+                                ```
+                            </div>
+                            <h3>attribute</h3>
+                              Provides the attribute specification for operator()
+                            <br/>
+                            <br/>
+                            <h3>ret</h3>
+                                Defines the return type of the function
+                            <br/>
+                            <br/>
+                            <h3>Body</h3>
+                                The sequense of actions (like in normal functions)
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div>
+                        </div>
+                        <div class="body">
+                            <h1><strong>Lambda functions</strong></h1>
+                            <h2>Live demo</h2>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+    </section>
+                <section>
+                    <section>
+     <div class="head">
+      <div class="logo"></div> <div class="title"><em>Null pointer(nullptr)</em></div>
+     </div>
+     <div class="body">
+                        The keyword nullptr denotes the pointer literal, which points into nothing. In c++ <strorng>NULL</strorng> keyword expands to 0, which can cause some problems
+                        <div data-markdown>
+       ```cpp
+&#35;include &lt;iostream&gt;
+&#35;include &lt;typeinfo&gt;
+
+int main () {
+    std::cout &lt;&lt; typeid (nullptr).name() &lt;&lt; std::endl;
+    std::cout &lt;&lt; typeid (NULL).name() &lt;&lt; std::endl;
+    std::cout &lt;&lt; typeid (102l).name() &lt;&lt; std::endl;
+}
+
+       ```
+      </div>
+     </div>
+     <br>
+     <br>
+     <div class="foot">
+      <div class="number"> </div>
+      <div class="follow"> </div>
+     </div>
+                    </section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div>
+                        </div>
+                        <div class="body">
+                            <h1><strong>Null pointer</strong></h1>
+                            <h2>Live demo</h2>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+    </section>
+                <section>
+                    <section>
+     <div class="head">
+      <div class="logo"></div> <div class="title"><em>Digit separators</em></div>
+     </div>
+     <div class="body">
+                        Digit separator is ' used between digits in number. It is just to make code more readeble 
+                        <div data-markdown>
+       ```cpp
+long long a = 1'234'567'890;
+double b = 1'23.1'23;
+       ```
+      </div>
+     </div>
+     <br>
+     <br>
+     <div class="foot">
+      <div class="number"> </div>
+      <div class="follow"> </div>
+     </div>
+                    </section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div>
+                        </div>
+                        <div class="body">
+                            <h1><strong>Digit separators</strong></h1>
+                            <h2>Live demo</h2>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+    </section>
+    <section>
+     <div class="head">
+      <div class="logo"></div> <div class="title">Compilers &amp; IDEs</div>
+     </div>
+     <div class="body">
+      <ul style="float: left;">
+       <li>LLVM Clang</li>
+       <li>GCC</li>
+       <li>Microsoft Visual C++</li>
+       <li>Embarcadero C++Builder</li>
+       <li>Intel C++ Compiler</li>
+       <li>IBM XL C++</li>
+      </ul>
+      <img src="./Vim.png" style="border-left: 150px solid rgba(0,0,0,0); width: 400px" />
+      <ul style="float: right; border-right: 40px solid rgba(0,0,0,0);">
+       <li>CLion</li>
+       <li>Visual Studio</li>
+       <li>Xcode</li>
+       <li>Eclipse</li>
+       <li>NetBeans</li>
+       <li>CodeBlocks</li>
+       <li>Qt Creator</li>
+       <li>Geany</li>
+       <li>CodeLite</li>
+       <li>Dev-C++</li>
+      </ul>
+     </div>
+     <br>
+     <br>
+     <div class="foot">
+      <div class="number"> </div>
+      <div class="follow"> </div>
+     </div>
+    </section>
+    <section>
+     <div class="head">
+      <div class="logo"></div> <div class="title">Resources</div>
+     </div>
+     <div class="body">
+      <ul class="resources">
+       <li>
+        <p class="name">Reveal.JS</p>
+        <p class="website"><a href="http://lab.hakim.se/reveal-js/">http:&#47;&#47;lab.hakim.se/reveal-js/</a></p>
+        <p class="copyright">Copyright &copy; 2016 Hakim El Hattab. All rights reserved.</p>
+       </li>
+      </ul>
+     </div>
+     <br>
+     <br>
+     <div class="foot">
+      <div class="number"> </div>
+      <div class="follow"> </div>
+     </div>
+    </section>
+    <section>
+     <div class="head">
+      <div class="logo"></div> <div class="title"></div>
+     </div>
+     <div class="body">
+     </div>
+     <br>
+     <br>
+     <div class="foot">
+      <div class="number"> </div>
+      <div class="follow"> </div>
+     </div>
+    </section>
+    <section style="background-image: url(../../../softuni_questions.png);">
+     <div class="head">
+      <div class="logo"></div> <div class="title">Questions</div>
+     </div>
+     <div class="body">
+     </div>
+     <br>
+     <br>
+     <div class="foot">
+      <div class="number"> </div>
+      <div class="follow"> </div>
+     </div>
+    </section>
+   </div>
+  </div>
+
+  <script src="../../../BASE/reveal.js/lib/js/head.min.js"></script>
+  <script src="../../../BASE/reveal.js/js/reveal.js"></script>
+
+  <script>
+
+   Reveal.initialize({
+    history: true,
+
+
+    dependencies: [
+     { src: '../../../BASE/reveal.js/plugin/zoom-js/zoom.js', async: true },
+     { src: '../../../BASE/reveal.js/plugin/markdown/marked.js' },
+     { src: '../../../BASE/reveal.js/plugin/markdown/markdown.js' },
+     { src: '../../../BASE/reveal.js/plugin/notes/notes.js', async: true },
+     { src: '../../../BASE/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+    ]
+   });
+   Reveal.configure({ backgroundTransition: 'none' })
+  </script>
+  <script src="../../../BASE/reveal.js/init.js"></script>
+ </body>
+</html>

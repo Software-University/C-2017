@@ -1,0 +1,45 @@
+                <section>
+                    <section>
+					<div class="head">
+						<div class="logo"></div> <div class="title"><em>Constant expressions(constexpr)</em></div>
+					</div>
+					<div class="body">
+                        The constexpr specifier declares that it is possible to evaluate the value of the function or variable at compile time
+                        <div data-markdown>
+							```cpp
+constexpr long long fib(int a) {
+    if (a &lt;= 1)
+        return 1;
+    return fib(a - 1) + fib(a - 2);
+}
+
+int main() {
+    constexpr long long a = fib(91);
+    std::cout &lt;&lt; a &lt;&lt; std::endl;
+}
+							```
+						</div>
+					</div>
+					<br>
+					<br>
+					<div class="foot">	
+						<div class="number"> </div>
+						<div class="follow"> </div>
+					</div>
+                    </section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div>
+                        </div>
+                        <div class="body">
+                            <h1><strong>Constant expressions</strong></h1>
+                            <h2>Live demo</h2>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">	
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+				</section>

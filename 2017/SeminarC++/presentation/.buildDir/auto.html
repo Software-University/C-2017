@@ -1,0 +1,63 @@
+				<section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div> <div class="title"><em>Auto/Decltype</em></div>
+                        </div>
+                        <div class="body">
+                            <h3><em>auto</em></h3>
+                            For variables, specifies that the type of the variable that is being declared will be automatically deduced from its initializer.
+                            <div data-markdown>
+                                ```cpp
+                                int a = 5;
+                                auto a = 5;
+                                ```
+                            </div>
+                            <div data-markdown>
+                                ```cpp
+                                long a = 5;
+                                auto a = 5l;
+                                ```
+                            </div>
+                            <div data-markdown>
+                                ```cpp
+                                map &lt;string, map &lt;string, map &lt; string, int &gt; &gt; &gt; a;
+                                map &lt;string, map &lt;string, map &lt; string, int &gt; &gt; &gt;::iterator it = a.begin ();
+                                auto it = a.begin ();
+                                ```
+                            </div>
+                            <h3><em>decltype</em></h3>
+                            Inspects the declared type of an entity or the type and value category of an expression. 
+                            <div data-markdown>
+                                ```cpp
+                                map &lt;string, map &lt;string, map &lt; string, int &gt; &gt; &gt; a;
+                                decltype (a.begin ()) it;
+                                for (it = a.begin () ; it != a.end () ; it ++)
+                                {
+                                    ...
+                                }
+                                ```
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">	
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+				    </section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div>
+                        </div>
+                        <div class="body">
+                            <h1><strong>Auto/Decltype</strong></h1>
+                            <h2>Live demo</h2>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">	
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+                </section>
