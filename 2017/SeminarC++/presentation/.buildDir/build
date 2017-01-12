@@ -1,0 +1,1 @@
+(g++ -E index.cpp 2> /dev/null) | grep -v -E "# " > ../index.html
