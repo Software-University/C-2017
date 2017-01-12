@@ -1,0 +1,118 @@
+                <section>
+                    <section>
+					<div class="head">
+						<div class="logo"></div> <div class="title"><em>String Literals</em></div>
+					</div>
+					<div class="body">
+                        There are 
+                        
+                        <div data-markdown>
+							```cpp
+" (unescaped_character|escaped_character)* " &#47;&#47; Normal string literal
+L" (unescaped_character|escaped_character)* " &#47;&#47; Wide string literal
+u8" (unescaped_character|escaped_character)* " &#47;&#47; UTF-8 encoded string literal
+u" (unescaped_character|escaped_character)* " &#47;&#47; UTF-16 encoded string literal
+U" (unescaped_character|escaped_character)* " &#47;&#47; UTF-32 encoded string literal
+prefix(optional) R "delimiter( raw_characters )delimiter" &#47;&#47; Raw string literal
+							```
+						</div>
+					</div>
+					<br>
+					<br>
+					<div class="foot">	
+						<div class="number"> </div>
+						<div class="follow"> </div>
+					</div>
+                    </section>
+                    <section>
+					<div class="head">
+						<div class="logo"></div> <div class="title"><em>String Literals</em></div>
+					</div>
+					<div class="body">
+                        <h3>Normal string literal</h3>
+                        <div data-markdown>
+							```cpp
+" (unescaped_character|escaped_character)* "
+							```
+						</div>
+                        This literals are the default(and most used). The type is <i>const char[]</i>
+                        <br>
+                        <br>
+                        <h3>Wide string literal</h3>
+                        <div data-markdown>
+							```cpp
+L" (unescaped_character|escaped_character)* "
+							```
+						</div>
+                        The type is <i>const wchar_t[]</i>. (Type whose range of values can represent distinct codes for all members of the largest extended character set specified among the supported locales).
+                        <br>
+                        <br>
+                        <h3>UTF-8 encoded string literal</h3>
+                        <div data-markdown>
+							```cpp
+u8" (unescaped_character|escaped_character)* "
+							```
+						</div>
+                        Strilng literal where the characters are encoden in UTF-8. <br> The type is <i>const char[]</i>.
+					</div>
+					<br>
+					<br>
+					<div class="foot">	
+						<div class="number"> </div>
+						<div class="follow"> </div>
+					</div>
+                    </section>
+                    <section>
+					<div class="head">
+						<div class="logo"></div> <div class="title"><em>String Literals</em></div>
+					</div>
+					<div class="body">
+                        <h3>UTF-16 encoded string literal</h3>
+                        <div data-markdown>
+							```cpp
+u" (unescaped_character|escaped_character)* "
+							```
+						</div>
+                        Strilng literal where the characters are encoded in UTF-16. <br> The type is <i>const char16_t[]</i>.
+                        <br>
+                        <br>
+                        <h3>UTF-32 encoded string literal</h3>
+                        <div data-markdown>
+							```cpp
+U" (unescaped_character|escaped_character)* "
+							```
+						</div>
+                        Strilng literal where the characters are encoded in UTF-32. <br> The type is <i>const char32_t[]</i>.
+                        <br>
+                        <br>
+                        <h3>Raw string literal</h3>
+                        <div data-markdown>
+							```cpp
+prefix(optional) R "delimiter( raw_characters )delimiter"
+							```
+						</div>
+                        String literal used to avoid escaped escaping of any character between <i>"delimiter(</i> and <i>)delimiter"</i>. If <i>prefix</i> is specified it works as describen above.
+					</div>
+					<br>
+					<br>
+					<div class="foot">	
+						<div class="number"> </div>
+						<div class="follow"> </div>
+					</div>
+                    </section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div>
+                        </div>
+                        <div class="body">
+                            <h1><strong>String literals</strong></h1>
+                            <h2>Live demo</h2>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">	
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+				</section>

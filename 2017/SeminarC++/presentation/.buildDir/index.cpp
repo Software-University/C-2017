@@ -139,7 +139,7 @@
 									<em>typedef/using</em>
 								</li>
 								<li>
-									Literals
+									String literals
 								</li>
 								<li>
 									Digit separators
@@ -172,6 +172,7 @@
 				#include "forloop.html"
 				#include "lambda.html"
 				#include "nullptr.html"
+                #include "literals.html"
 				#include "digsep.html"
 				#include "ide.html"
 				#include "resource.html"
