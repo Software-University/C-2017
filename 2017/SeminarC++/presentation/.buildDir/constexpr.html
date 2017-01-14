@@ -7,18 +7,18 @@
                         The constexpr specifier declares that it is possible to evaluate the value of the function or variable at compile time
                         <div data-markdown>
 							```cpp
-							constexpr long long fib (int a) 
-							{
-								if (a &lt;= 1)
-									return 1;
-								return fib (a - 1) + fib (a - 2);
-							}
+constexpr long long fib(int a) {
+    if (a &lt;= 1) {
+        &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;return 1;
+    }
+    return fib(a - 1) + fib(a - 2);
+}
 
-							int main () 
-							{
-								constexpr long long a = fib (91);
-								std::cout &lt;&lt; a &lt;&lt; std::endl;
-							}
+int main() {
+    constexpr long long a = fib(91);
+    std::cout &lt;&lt; a &lt;&lt; std::endl;
+}
+
 							```
 						</div>
 					</div>

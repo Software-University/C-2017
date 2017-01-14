@@ -118,8 +118,11 @@
          <em>constexpr</em>
         </li>
         <li>
-         Initializer lists, Uniform initialization
+         Initializer lists
         </li>
+                                <li>
+                                    Uniform initialization
+                                </li>
         <li>
          <em>auto/decltype</em>
         </li>
@@ -450,18 +453,18 @@ int main() {
                         The constexpr specifier declares that it is possible to evaluate the value of the function or variable at compile time
                         <div data-markdown>
        ```cpp
-       constexpr long long fib (int a)
-       {
-        if (a &lt;= 1)
-         return 1;
-        return fib (a - 1) + fib (a - 2);
-       }
+constexpr long long fib(int a) {
+    if (a &lt;= 1) {
+        &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;return 1;
+    }
+    return fib(a - 1) + fib(a - 2);
+}
 
-       int main ()
-       {
-        constexpr long long a = fib (91);
-        std::cout &lt;&lt; a &lt;&lt; std::endl;
-       }
+int main() {
+    constexpr long long a = fib(91);
+    std::cout &lt;&lt; a &lt;&lt; std::endl;
+}
+
        ```
       </div>
      </div>
@@ -488,6 +491,100 @@ int main() {
                         </div>
                     </section>
     </section>
+    <section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div> <div class="title"><em>Initalizer lists</em></div>
+                        </div>
+                        <div class="body">
+                            This type is used to access the values in a C++ initialization list, which is a list of elements of type <i>const T</i>
+                            <div data-markdown>
+                                ```cpp
+class myClass {
+  private:
+    int a, b, c;
+  public:
+    myClass();
+    myClass(int, int, int);
+    myClass(std::initializer_list&lt;int&gt;)
+}
+myClass a;
+myClass b(1, 2, 3);
+myClass c{1, 2, 3};
+                                ```
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+        </section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div>
+                        </div>
+                        <div class="body">
+                            <h1><strong>Initalizer lists</strong></h1>
+                            <h2>Live demo</h2>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+                </section>
+    <section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div> <div class="title"><em>Uniform initialization</em></div>
+                        </div>
+                        <div class="body">
+                            Uniform Initialization expands on the Initializer List syntax, to provide a syntax that allows for fully uniform type initialization that works on any object
+                            <div data-markdown>
+                                ```cpp
+&#35;include &lt;string&gt;
+
+class Person {
+  private:
+    int age;
+    std::string name;
+    double height;
+
+  public:
+    Person(int age, std::string name, double height)
+        : age{age}, name{name}, height{height} {}
+};
+
+                                ```
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+        </section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div>
+                        </div>
+                        <div class="body">
+                            <h1><strong>Uniform initialization</strong></h1>
+                            <h2>Live demo</h2>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+                </section>
     <section>
                     <section>
                         <div class="head">

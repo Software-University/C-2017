@@ -118,8 +118,11 @@
 									<em>constexpr</em>
 								</li>
 								<li>
-									Initializer lists, Uniform initialization
+									Initializer lists
 								</li>
+                                <li>
+                                    Uniform initialization
+                                </li>
 								<li>
 									<em>auto/decltype</em>
 								</li>
@@ -169,6 +172,8 @@
 				#include "tempaltes.html"
 				#include "extern.html"
 				#include "constexpr.html"
+                #include "inil.html"
+                #include "uniinit.html"
 				#include "auto.html"
 				#include "forloop.html"
 				#include "lambda.html"
