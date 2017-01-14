@@ -112,9 +112,9 @@
 								<li>
 									<em>extern</em>
 								</li>
-								<li>
-									Rvalues
-								</li>
+				//				<li>
+				//					Rvalues
+				//				</li>
 								<li>
 									<em>constexpr</em>
 								</li>
@@ -152,7 +152,7 @@
 									Attributes
 								</li>
 								<li>
-									Standard Template Library(STL)
+									new in STL
 								</li>
 							</ul>
                             <img src="img/contents.png"/>
@@ -172,6 +172,7 @@
 				#include "class.html"
 				#include "tempaltes.html"
 				#include "extern.html"
+				//#include "values.html"
 				#include "constexpr.html"
                 #include "inil.html"
                 #include "uniinit.html"
@@ -180,28 +181,17 @@
 				#include "lambda.html"
 				#include "nullptr.html"
 				#include "enum.html"
+				#include "using.html"
 				#include "digsep.html"
-                #include "stl.html"
+				#include "stl.html"
 				#include "ide.html"
 				#include "resource.html"
-				<section>
-					<div class="head">
-						<div class="logo"></div> <div class="title"></div>
-					</div>
-					<div class="body">
-					</div>
-					<br>
-					<br>
-					<div class="foot">	
-						<div class="number"> </div>
-						<div class="follow"> </div>
-					</div>
-				</section>
 				<section style="background-image: url(../../../softuni_questions.png);">
 					<div class="head">
 						<div class="logo"></div> <div class="title">Questions</div>
 					</div>
 					<div class="body">
+						<img src="../../../wiz_quest.png" />
 					</div>
 					<br>
 					<br>
