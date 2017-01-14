@@ -49,8 +49,9 @@
       <center>
        History, standarts (differences) and a lot of practices
       </center>
+      <br>
       <img height="500px" src="c11.jpg" />
-      <img src="../../../BASE/wizard.png" style="float: right;" />
+      <img src="../../../BASE/wizard.png" style="float: right; position:fixed; top: 290px; right: 10px;" />
      </div>
      <div class="foot">
       <div class="bottom">
@@ -133,13 +134,13 @@
          <em>Null pointer</em>
         </li>
         <li>
-         enumerations, "&lt;&lt;&gt;&gt;"
+         enumerations
         </li>
         <li>
          <em>typedef/using</em>
         </li>
         <li>
-         String literals
+         Literals
         </li>
         <li>
          Digit separators
@@ -510,8 +511,8 @@ int main() {
                             </div>
                             <div data-markdown>
                                 ```cpp
-                                map &lt;string, map &lt;string, map &lt; string, int &gt; &gt; &gt; a;
-                                map &lt;string, map &lt;string, map &lt; string, int &gt; &gt; &gt;::iterator it = a.begin ();
+                                map &lt;string, map &lt;string, map &lt; string, int &gt;&gt;&gt; a;
+                                map &lt;string, map &lt;string, map &lt; string, int &gt;&gt;&gt;::iterator it = a.begin ();
                                 auto it = a.begin ();
                                 ```
                             </div>
@@ -792,114 +793,121 @@ int main () {
                         </div>
                     </section>
     </section>
-                <section>
+    <section>
                     <section>
-     <div class="head">
-      <div class="logo"></div> <div class="title"><em>String Literals</em></div>
-     </div>
-     <div class="body">
-                        There are
+                        <div class="head">
+                            <div class="logo"></div> <div class="title"><em>Enum</em></div>
+                        </div>
+                        <div class="body">
+                            <h3><em>enum</em></h3>
+       An enumeration is a distinct type whose value is restricted to a range of values (see below for details), which may include several explicitly named constants ("enumerators"). The values of the constants are values of an integral type known as the underlying type of the enumeration.
+                            <div data-markdown>
+       ```cpp
+        &#35;include &lt;iostream&gt;
+        enum smallenum : int16_t
+        {
+         a,
+         b,
+         c
+        };
+       ```
+       </div>
+       <div data-markdown>
+       ```cpp
+        enum color
+        {
+         red,
+         yellow,
+         green = 20,
+         blue
+        };
+       ```
+       </div>
+       <div data-markdown>
+       ```cpp
+        enum class altitude : char
+        {
+         high='h',
+         low='l'
+        };
+       ```
+       </div></td><td>
+       <div data-markdown>
+       ```cpp
+        enum
+        {
+         d,
+         e,
+         f = e + 2
+        };
+       ```
+       </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+        </section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div> <div class="title"><em>Enum</em></div>
+                        </div>
+                        <div class="body">
+                            <h3><em>enum</em></h3>
+       <div data-markdown>
+        ```cpp
+        std::ostream&amp; operator&lt;&lt;(std::ostream&amp; os, color c)
+        {
+         switch(c)
+         {
+          case red : os &lt;&lt; "red"; break;
+          case yellow: os &lt;&lt; "yellow"; break;
+          case green : os &lt;&lt; "green"; break;
+          case blue : os &lt;&lt; "blue"; break;
+          default : os.setstate(std::ios_base::failbit);
+         }
+         return os;
+        }
+        ```
+       </div>
+       <div data-markdown>
+        ```cpp
+        std::ostream&amp; operator&lt;&lt;(std::ostream&amp; os, altitude al)
+        {
+         return os &lt;&lt; static_cast&lt;char&gt;(al);
+        }
+        ```
+       </div>
+                            <div data-markdown>
+       ```cpp
+        int main ()
+        {
+         color col = red;
+         altitude a;
+         a = altitude::low;
 
-                        <div data-markdown>
-       ```cpp
-" (unescaped_character|escaped_character)* " &#47;&#47; Normal string literal
-L" (unescaped_character|escaped_character)* " &#47;&#47; Wide string literal
-u8" (unescaped_character|escaped_character)* " &#47;&#47; UTF-8 encoded string literal
-u" (unescaped_character|escaped_character)* " &#47;&#47; UTF-16 encoded string literal
-U" (unescaped_character|escaped_character)* " &#47;&#47; UTF-32 encoded string literal
-prefix(optional) R "delimiter( raw_characters )delimiter" &#47;&#47; Raw string literal
+         std::cout &lt;&lt; "col = " &lt;&lt; col &lt;&lt; '\n'
+             &lt;&lt; "a = " &lt;&lt; a &lt;&lt; '\n'
+             &lt;&lt; "f = " &lt;&lt; f &lt;&lt; '\n';
+        }
        ```
-      </div>
-     </div>
-     <br>
-     <br>
-     <div class="foot">
-      <div class="number"> </div>
-      <div class="follow"> </div>
-     </div>
-                    </section>
-                    <section>
-     <div class="head">
-      <div class="logo"></div> <div class="title"><em>String Literals</em></div>
-     </div>
-     <div class="body">
-                        <h3>Normal string literal</h3>
-                        <div data-markdown>
-       ```cpp
-" (unescaped_character|escaped_character)* "
-       ```
-      </div>
-                        This literals are the default(and most used). The type is <i>const char[]</i>
+                            </div>
+                        </div>
                         <br>
                         <br>
-                        <h3>Wide string literal</h3>
-                        <div data-markdown>
-       ```cpp
-L" (unescaped_character|escaped_character)* "
-       ```
-      </div>
-                        The type is <i>const wchar_t[]</i>. (Type whose range of values can represent distinct codes for all members of the largest extended character set specified among the supported locales).
-                        <br>
-                        <br>
-                        <h3>UTF-8 encoded string literal</h3>
-                        <div data-markdown>
-       ```cpp
-u8" (unescaped_character|escaped_character)* "
-       ```
-      </div>
-                        Strilng literal where the characters are encoden in UTF-8. <br> The type is <i>const char[]</i>.
-     </div>
-     <br>
-     <br>
-     <div class="foot">
-      <div class="number"> </div>
-      <div class="follow"> </div>
-     </div>
-                    </section>
-                    <section>
-     <div class="head">
-      <div class="logo"></div> <div class="title"><em>String Literals</em></div>
-     </div>
-     <div class="body">
-                        <h3>UTF-16 encoded string literal</h3>
-                        <div data-markdown>
-       ```cpp
-u" (unescaped_character|escaped_character)* "
-       ```
-      </div>
-                        Strilng literal where the characters are encoded in UTF-16. <br> The type is <i>const char16_t[]</i>.
-                        <br>
-                        <br>
-                        <h3>UTF-32 encoded string literal</h3>
-                        <div data-markdown>
-       ```cpp
-U" (unescaped_character|escaped_character)* "
-       ```
-      </div>
-                        Strilng literal where the characters are encoded in UTF-32. <br> The type is <i>const char32_t[]</i>.
-                        <br>
-                        <br>
-                        <h3>Raw string literal</h3>
-                        <div data-markdown>
-       ```cpp
-prefix(optional) R "delimiter( raw_characters )delimiter"
-       ```
-      </div>
-                        String literal used to avoid escaped escaping of any character between <i>"delimiter(</i> and <i>)delimiter"</i>. If <i>prefix</i> is specified it works as describen above.
-     </div>
-     <br>
-     <br>
-     <div class="foot">
-      <div class="number"> </div>
-      <div class="follow"> </div>
-     </div>
-                    </section>
+                        <div class="foot">
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+        </section>
                     <section>
                         <div class="head">
                             <div class="logo"></div>
                         </div>
                         <div class="body">
-                            <h1><strong>String literals</strong></h1>
+                            <h1><strong>Enum</strong></h1>
                             <h2>Live demo</h2>
                         </div>
                         <br>
@@ -909,7 +917,7 @@ prefix(optional) R "delimiter( raw_characters )delimiter"
                             <div class="follow"> </div>
                         </div>
                     </section>
-    </section>
+                </section>
                 <section>
                     <section>
      <div class="head">
@@ -956,9 +964,6 @@ double b = 1'23.1'23;
        <li>LLVM Clang</li>
        <li>GCC</li>
        <li>Microsoft Visual C++</li>
-       <li>Embarcadero C++Builder</li>
-       <li>Intel C++ Compiler</li>
-       <li>IBM XL C++</li>
       </ul>
       <img src="./Vim.png" style="border-left: 150px solid rgba(0,0,0,0); width: 400px" />
       <ul style="float: right; border-right: 40px solid rgba(0,0,0,0);">

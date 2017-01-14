@@ -49,8 +49,9 @@
 						<center>
 							History, standarts (differences) and a lot of practices
 						</center>
+						<br>
 						<img height="500px" src="c11.jpg" />
-						<img src="../../../BASE/wizard.png" style="float: right;" />
+						<img src="../../../BASE/wizard.png" style="float: right; position:fixed; top: 290px; right: 10px;" />
 					</div>
 					<div class="foot">	
 						<div class="bottom">
@@ -133,13 +134,13 @@
 									<em>Null pointer</em>
 								</li>
 								<li>
-									enumerations, "&lt;&lt;&gt;&gt;"
+									enumerations
 								</li>
 								<li>
 									<em>typedef/using</em>
 								</li>
 								<li>
-									String literals
+									Literals
 								</li>
 								<li>
 									Digit separators
@@ -173,7 +174,7 @@
 				#include "forloop.html"
 				#include "lambda.html"
 				#include "nullptr.html"
-                #include "literals.html"
+				#include "enum.html"
 				#include "digsep.html"
 				#include "ide.html"
 				#include "resource.html"
