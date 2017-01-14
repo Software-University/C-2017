@@ -507,7 +507,7 @@ class myClass {
   public:
     myClass();
     myClass(int, int, int);
-    myClass(std::initializer_list&lt;int&gt;)
+    myClass(std::initializer_list&lt;int&gt;);
 }
 myClass a;
 myClass b(1, 2, 3);
@@ -1053,6 +1053,132 @@ double b = 1'23.1'23;
                         </div>
                     </section>
     </section>
+    <section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div> <div class="title"><em>New in STL</em></div>
+                        </div>
+                        <div class="body">
+                            <small>
+                            <table class="mainpagetable" style="width:100%; white-space:nowrap;" cellspacing="0">
+
+
+<tbody>
+<tr class="row">
+<td>
+<div class="mainpagediv">
+<p><a href="http://en.cppreference.com/w/cpp/language/ascii" title="cpp/language/ascii"> ASCII chart</a><br>
+<a href="http://en.cppreference.com/w/cpp/compiler_support" title="cpp/compiler support"> Compiler support</a>
+</p>
+</div>
+<p><b><a href="http://en.cppreference.com/w/cpp/language" title="cpp/language"> Language</a></b>
+</p>
+<div class="mainpagediv">
+<p><a href="http://en.cppreference.com/w/cpp/preprocessor" title="cpp/preprocessor"> Preprocessor</a><br>
+<a href="http://en.cppreference.com/w/cpp/keyword" title="cpp/keyword"> Keywords</a><br>
+<a href="http://en.cppreference.com/w/cpp/language/operator_precedence" title="cpp/language/operator precedence"> Operator precedence</a><br>
+<a href="http://en.cppreference.com/w/cpp/language/escape" title="cpp/language/escape"> Escape sequences</a><br>
+<a href="http://en.cppreference.com/w/cpp/language/types" title="cpp/language/types"> Fundamental types</a>
+</p>
+</div>
+<p><b><a href="http://en.cppreference.com/w/cpp/header" title="cpp/header"> Headers</a></b>
+</p><p><b><a href="http://en.cppreference.com/w/cpp/concept" title="cpp/concept"> Library concepts</a></b>
+</p><p><b><a href="http://en.cppreference.com/w/cpp/utility" title="cpp/utility"> Utilities library</a></b>
+</p>
+<div class="mainpagediv">
+<p><a href="http://en.cppreference.com/w/cpp/types" title="cpp/types"> Type support</a><br>
+<a href="http://en.cppreference.com/w/cpp/memory" title="cpp/memory"> Dynamic memory management</a><br>
+<a href="http://en.cppreference.com/w/cpp/error" title="cpp/error"> Error handling</a><br>
+<a href="http://en.cppreference.com/w/cpp/utility/program" title="cpp/utility/program"> Program utilities</a><br>
+<a href="http://en.cppreference.com/w/cpp/chrono" title="cpp/chrono"> Date and time</a><br>
+<a href="http://en.cppreference.com/w/cpp/utility/bitset" title="cpp/utility/bitset"><tt>bitset</tt></a><br>
+<a href="http://en.cppreference.com/w/cpp/utility/functional" title="cpp/utility/functional"> Function objects</a><br>
+<a href="http://en.cppreference.com/w/cpp/utility/pair" title="cpp/utility/pair"><tt>pair</tt></a>&nbsp;&nbsp;−&nbsp;&nbsp;
+<a href="http://en.cppreference.com/w/cpp/utility/tuple" title="cpp/utility/tuple"><tt>tuple</tt></a> <span class="t-mark-rev t-since-cxx11"></span><br>
+<a href="http://en.cppreference.com/w/cpp/utility/integer_sequence" title="cpp/utility/integer sequence"><tt>integer_sequence</tt></a> <span class="t-mark-rev t-since-cxx14"></span><br>
+<a href="http://en.cppreference.com/w/cpp/utility/optional" title="cpp/utility/optional"><tt>optional</tt></a> <span class="t-mark-rev t-since-cxx17"></span>&nbsp;&nbsp;−&nbsp;&nbsp;<a href="http://en.cppreference.com/w/cpp/utility/any" title="cpp/utility/any"><tt>any</tt></a> <span class="t-mark-rev t-since-cxx17"></span><br>
+<a href="http://en.cppreference.com/w/cpp/utility/variant" title="cpp/utility/variant"><tt>variant</tt></a> <span class="t-mark-rev t-since-cxx17"></span>
+</p>
+</div>
+</td>
+<td>
+<p><b><a href="http://en.cppreference.com/w/cpp/string" title="cpp/string"> Strings library</a></b>
+</p>
+<div class="mainpagediv">
+<p><a href="http://en.cppreference.com/w/cpp/string/basic_string" title="cpp/string/basic string"><tt>basic_string</tt></a><br>
+<a href="http://en.cppreference.com/w/cpp/string/basic_string_view" title="cpp/string/basic string view"><tt>basic_string_view</tt></a> <span class="t-mark-rev t-since-cxx17"></span><br>
+<a href="http://en.cppreference.com/w/cpp/string/byte" title="cpp/string/byte"> Null-terminated byte strings</a><br>
+<a href="http://en.cppreference.com/w/cpp/string/multibyte" title="cpp/string/multibyte"> Null-terminated multibyte strings</a><br>
+<a href="http://en.cppreference.com/w/cpp/string/wide" title="cpp/string/wide"> Null-terminated wide strings</a>
+</p>
+</div>
+<p><b><a href="http://en.cppreference.com/w/cpp/container" title="cpp/container"> Containers library</a></b>
+</p>
+<div class="mainpagediv">
+<p><a href="http://en.cppreference.com/w/cpp/container/array" title="cpp/container/array"><tt>array</tt></a> <span class="t-mark-rev t-since-cxx11"></span><br>
+<a href="http://en.cppreference.com/w/cpp/container/vector" title="cpp/container/vector"><tt>vector</tt></a>&nbsp;&nbsp;−&nbsp;&nbsp;
+<a href="http://en.cppreference.com/w/cpp/container/deque" title="cpp/container/deque"><tt>deque</tt></a><br>
+<a href="http://en.cppreference.com/w/cpp/container/list" title="cpp/container/list"><tt>list</tt></a>&nbsp;&nbsp;−&nbsp;&nbsp;<a href="http://en.cppreference.com/w/cpp/container/forward_list" title="cpp/container/forward list"><tt>forward_list</tt></a> <span class="t-mark-rev t-since-cxx11"></span><br>
+<a href="http://en.cppreference.com/w/cpp/container/set" title="cpp/container/set"><tt>set</tt></a>&nbsp;&nbsp;−&nbsp;&nbsp;<a href="http://en.cppreference.com/w/cpp/container/multiset" title="cpp/container/multiset"><tt>multiset</tt></a><br>
+<a href="http://en.cppreference.com/w/cpp/container/map" title="cpp/container/map"><tt>map</tt></a>&nbsp;&nbsp;−&nbsp;&nbsp;<a href="http://en.cppreference.com/w/cpp/container/multimap" title="cpp/container/multimap"><tt>multimap</tt></a><br>
+<a href="http://en.cppreference.com/w/cpp/container/unordered_set" title="cpp/container/unordered set"><tt>unordered_set</tt></a> <span class="t-mark-rev t-since-cxx11"></span><br>
+<a href="http://en.cppreference.com/w/cpp/container/unordered_multiset" title="cpp/container/unordered multiset"><tt>unordered_multiset</tt></a> <span class="t-mark-rev t-since-cxx11"></span><br>
+<a href="http://en.cppreference.com/w/cpp/container/unordered_map" title="cpp/container/unordered map"><tt>unordered_map</tt></a> <span class="t-mark-rev t-since-cxx11"></span><br>
+<a href="http://en.cppreference.com/w/cpp/container/unordered_multimap" title="cpp/container/unordered multimap"><tt>unordered_multimap</tt></a> <span class="t-mark-rev t-since-cxx11"></span><br>
+<a href="http://en.cppreference.com/w/cpp/container/stack" title="cpp/container/stack"><tt>stack</tt></a>&nbsp;&nbsp;−&nbsp;&nbsp;<a href="http://en.cppreference.com/w/cpp/container/queue" title="cpp/container/queue"><tt>queue</tt></a>&nbsp;&nbsp;−&nbsp;&nbsp;<a href="http://en.cppreference.com/w/cpp/container/priority_queue" title="cpp/container/priority queue"><tt>priority_queue</tt></a>
+</p>
+</div>
+<p><b><a href="http://en.cppreference.com/w/cpp/algorithm" title="cpp/algorithm"> Algorithms library</a></b>
+</p><p><b><a href="http://en.cppreference.com/w/cpp/iterator" title="cpp/iterator"> Iterators library</a></b>
+</p><p><b><a href="http://en.cppreference.com/w/cpp/numeric" title="cpp/numeric"> Numerics library</a></b>
+</p>
+<div class="mainpagediv">
+<p><a href="http://en.cppreference.com/w/cpp/numeric/math" title="cpp/numeric/math"> Common mathematical functions</a><br>
+<a href="http://en.cppreference.com/w/cpp/numeric/special_math" title="cpp/numeric/special math"> Special mathematical functions</a> <span class="t-mark-rev t-since-cxx17"></span><br>
+<a href="http://en.cppreference.com/w/cpp/numeric/complex" title="cpp/numeric/complex"> Complex numbers</a><br>
+<a href="http://en.cppreference.com/w/cpp/numeric/random" title="cpp/numeric/random"> Pseudo-random number generation</a>
+</p>
+</div>
+</td>
+<td>
+<p><b><a href="http://en.cppreference.com/w/cpp/io" title="cpp/io"> Input/output library</a></b>
+</p>
+<div class="mainpagediv">
+<p><a href="http://en.cppreference.com/w/cpp/io/basic_streambuf" title="cpp/io/basic streambuf"><tt>basic_streambuf</tt></a><br>
+<a href="http://en.cppreference.com/w/cpp/io/basic_filebuf" title="cpp/io/basic filebuf"><tt>basic_filebuf</tt></a><br>
+<a href="http://en.cppreference.com/w/cpp/io/basic_stringbuf" title="cpp/io/basic stringbuf"><tt>basic_stringbuf</tt></a><br>
+<a href="http://en.cppreference.com/w/cpp/io/ios_base" title="cpp/io/ios base"><tt>ios_base</tt></a><br>
+<a href="http://en.cppreference.com/w/cpp/io/basic_ios" title="cpp/io/basic ios"><tt>basic_ios</tt></a><br>
+<a href="http://en.cppreference.com/w/cpp/io/basic_istream" title="cpp/io/basic istream"><tt>basic_istream</tt></a><br>
+<a href="http://en.cppreference.com/w/cpp/io/basic_ostream" title="cpp/io/basic ostream"><tt>basic_ostream</tt></a><br>
+<a href="http://en.cppreference.com/w/cpp/io/basic_iostream" title="cpp/io/basic iostream"><tt>basic_iostream</tt></a><br>
+<a href="http://en.cppreference.com/w/cpp/io/basic_ifstream" title="cpp/io/basic ifstream"><tt>basic_ifstream</tt></a><br>
+<a href="http://en.cppreference.com/w/cpp/io/basic_ofstream" title="cpp/io/basic ofstream"><tt>basic_ofstream</tt></a><br>
+<a href="http://en.cppreference.com/w/cpp/io/basic_fstream" title="cpp/io/basic fstream"><tt>basic_fstream</tt></a><br>
+<a href="http://en.cppreference.com/w/cpp/io/basic_istringstream" title="cpp/io/basic istringstream"><tt>basic_istringstream</tt></a><br>
+<a href="http://en.cppreference.com/w/cpp/io/basic_ostringstream" title="cpp/io/basic ostringstream"><tt>basic_ostringstream</tt></a><br>
+<a href="http://en.cppreference.com/w/cpp/io/basic_stringstream" title="cpp/io/basic stringstream"><tt>basic_stringstream</tt></a><br>
+<a href="http://en.cppreference.com/w/cpp/io/manip" title="cpp/io/manip"> I/O manipulators</a><br>
+<a href="http://en.cppreference.com/w/cpp/io/c" title="cpp/io/c"> C-style I/O </a>
+</p>
+</div>
+<p><b><a href="http://en.cppreference.com/w/cpp/locale" title="cpp/locale"> Localizations library</a></b>
+</p><p><b><a href="http://en.cppreference.com/w/cpp/regex" title="cpp/regex"> Regular expressions library</a></b> <span class="t-mark-rev t-since-cxx11"></span>
+</p><p><b><a href="http://en.cppreference.com/w/cpp/atomic" title="cpp/atomic"> Atomic operations library</a></b> <span class="t-mark-rev t-since-cxx11"></span>
+</p><p><b><a href="http://en.cppreference.com/w/cpp/thread" title="cpp/thread"> Thread support library</a></b> <span class="t-mark-rev t-since-cxx11"></span>
+</p><p><b><a href="http://en.cppreference.com/w/cpp/filesystem" title="cpp/filesystem"> Filesystem library</a></b> <span class="t-mark-rev t-since-cxx17"></span>
+</p>
+</td></tr>
+</tbody></table></small>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+        </section>
+                </section>
     <section>
      <div class="head">
       <div class="logo"></div> <div class="title">Compilers &amp; IDEs</div>

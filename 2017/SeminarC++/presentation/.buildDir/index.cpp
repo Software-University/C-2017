@@ -181,6 +181,7 @@
 				#include "nullptr.html"
 				#include "enum.html"
 				#include "digsep.html"
+                #include "stl.html"
 				#include "ide.html"
 				#include "resource.html"
 				<section>
