@@ -1,0 +1,126 @@
+				<section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div> <div class="title"><em>Enum</em></div>
+                        </div>
+                        <div class="body">
+                            <h3><em>enum</em></h3>
+							An enumeration is a distinct type whose value is restricted to a range of values (see below for details), which may include several explicitly named constants ("enumerators"). The values of the constants are values of an integral type known as the underlying type of the enumeration. 
+                            <div data-markdown>
+							```cpp
+								&#35;include &lt;iostream&gt;
+								enum smallenum : int16_t
+								{
+									a,
+									b,
+									c
+								};
+							```
+							</div>
+							<div data-markdown>
+							```cpp
+								enum color
+								{
+									red,
+									yellow,
+									green = 20,
+									blue
+								};
+							```
+							</div>
+							<div data-markdown>
+							```cpp
+								enum class altitude : char
+								{ 
+									high='h',
+									low='l'
+								}; 
+							```
+							</div></td><td>
+							<div data-markdown>
+							```cpp
+								enum
+								{
+									d,
+									e,
+									f = e + 2
+								};
+							```
+							</div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">	
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+				    </section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div> <div class="title"><em>Enum</em></div>
+                        </div>
+                        <div class="body">
+                            <h3><em>enum</em></h3>
+							<div data-markdown>
+								```cpp
+								std::ostream&amp; operator&lt;&lt;(std::ostream&amp; os, color c)
+								{
+									switch(c)
+									{
+										case red   : os &lt;&lt; "red";    break;
+										case yellow: os &lt;&lt; "yellow"; break;
+										case green : os &lt;&lt; "green";  break;
+										case blue  : os &lt;&lt; "blue";   break;
+										default    : os.setstate(std::ios_base::failbit);
+									}
+									return os;
+								}
+								```
+							</div>
+							<div data-markdown>
+								```cpp
+								std::ostream&amp; operator&lt;&lt;(std::ostream&amp; os, altitude al)
+								{
+									return os &lt;&lt; static_cast&lt;char&gt;(al);
+								}
+								```
+							</div>
+                            <div data-markdown>
+							```cpp
+								int main ()
+								{
+									color col = red;
+									altitude a;
+									a = altitude::low;
+
+									std::cout &lt;&lt; "col = " &lt;&lt; col &lt;&lt; '\n'
+											  &lt;&lt; "a = "   &lt;&lt; a   &lt;&lt; '\n'
+											  &lt;&lt; "f = "   &lt;&lt; f   &lt;&lt; '\n';
+								}
+							```
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">	
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+				    </section>
+                    <section>
+                        <div class="head">
+                            <div class="logo"></div>
+                        </div>
+                        <div class="body">
+                            <h1><strong>Enum</strong></h1>
+                            <h2>Live demo</h2>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="foot">	
+                            <div class="number"> </div>
+                            <div class="follow"> </div>
+                        </div>
+                    </section>
+                </section>
+
