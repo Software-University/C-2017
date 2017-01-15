@@ -182,6 +182,7 @@
 				#include "nullptr.html"
 				#include "enum.html"
 				#include "using.html"
+                #include "literals.html"
 				#include "digsep.html"
 				#include "stl.html"
 				#include "ide.html"
