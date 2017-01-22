@@ -187,20 +187,9 @@
 				#include "stl.html"
 				#include "ide.html"
 				#include "resource.html"
-				<section style="background-image: url(../../../softuni_questions.png);">
-					<div class="head">
-						<div class="logo"></div> <div class="title">Questions</div>
-					</div>
-					<div class="body">
-						<img src="../../../wiz_quest.png" />
-					</div>
-					<br>
-					<br>
-					<div class="foot">	
-						<div class="number"> </div>
-						<div class="follow"> </div>
-					</div>
-				</section>
+				#include "question.html"
+				//#include "experimental.html"
+				//#include "question.html"
 			</div>
 		</div>
 
