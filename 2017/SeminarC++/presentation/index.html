@@ -360,12 +360,17 @@ template &lt;typename T&gt; struct Comparer
                             <div class="logo"></div> <div class="title"><em>Templates</em></div>
                         </div>
                         <div class="body">
+                            <h3><em>Variable templates</em></h3>
+                            <div data-markdown>
+                                ```cpp
+template &lt;typename T&gt; constexpr T PI = T(3.1415926535897932385);
+                                ```
+                            </div>
                             <h3><em>Variadic templates</em></h3>
        A template with unlown number of template variables
                             <div data-markdown>
                                 ```cpp
-template &lt;typename x, typename... args&gt;
-void printf(const char *format, x what, args... params) {
+template &lt;typename T, typename... Ts&gt; void print(T x, Ts... xs) {
     ...do something...
 }
                                 ```
